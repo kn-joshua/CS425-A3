@@ -98,6 +98,11 @@ You only need to compile and run **client.cpp** (this code) to establish a hands
 6. **Cleanup**
    - Closes the raw socket at the end.
 
+##Error Handling
+We primarily check for two cases of possible errors:
+1. If server does not respond to the client within 5 seconds, a timeout occurs.
+2. If server responds with the wrong syn-ack an error is shown for the failed handshake.
+
 ## Handshake Sequence Numbers
 In this simplified assignment, the sequence and acknowledgment numbers must follow a fixed pattern for successful completion:
 
